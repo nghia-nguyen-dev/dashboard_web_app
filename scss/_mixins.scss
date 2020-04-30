@@ -1,0 +1,114 @@
+@mixin button {
+    width: 100%;
+    color: white;
+    background-color: $primary;
+    border-radius: 5px;
+    padding: .7rem;
+    text-transform: uppercase;
+    font-family: nunito;
+    font-weight: 700;
+    border: none;
+}
+
+@mixin msg-base-style {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: .7rem;
+    font-family: nunito;
+    color: #727272;
+    background-color: #f6f6f6;
+    font-size: 0.75rem;
+    @content;
+}
+
+@mixin circle-img-frame {
+    border-radius: 50%;
+    height: 43px;
+    border: none;
+    @content;
+}
+
+@mixin chart-heading {
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: max-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $light-gray-txt;
+    letter-spacing: 0.5px;
+}
+
+@mixin side-paddings {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@mixin padding-spacers {
+    padding: 1.5rem 1rem;
+    @content;
+}
+
+@mixin margins-spacers {
+    margin: 1rem 1rem;
+}
+
+@mixin card-profile {
+    .member-profile {
+        border-bottom: 1px solid #e8e8e8;
+        padding: 1rem 0;
+        display: flex;
+        font-size: 0.75rem;
+        h4{
+            font-weight: 700;
+        }
+        img {
+            @include circle-img-frame();
+            height: 43px;
+            border: none;
+        }
+        .member-content {
+            width: 100%;
+            padding-left: .5rem;
+            .name-email {
+                margin-bottom: .3rem;
+            }
+            h4 {
+                margin-bottom: .15rem;
+                color: $primary-dark;
+            }
+            p {
+                opacity: 50%;
+            }
+        }
+    }
+}
+
+
+@mixin card-social {
+    background-color: $secondary-gray;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: $border-radius;
+    .content {
+        margin-left: 1rem;
+    }
+    .social-icon {
+        width: 48px;
+        height: 48px;
+        background-color: $primary;
+        border-radius: 50%;
+        padding: .8rem;
+    }
+    p {
+        font-size: 0.75rem;
+        color: $primary;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+    }    
+}

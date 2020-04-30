@@ -1,0 +1,82 @@
+.bell-icon:hover {
+    animation: swivel .6s ease-in-out;
+}
+
+  @keyframes swivel {
+    20% {
+        transform: rotate(35deg);
+    }
+    40% {
+        transform: rotate(-30deg);
+    }
+    60% {
+        transform: rotate(20deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
+
+@keyframes slide-down {
+    from {
+        height: 0;
+    }
+    to {
+        height: 149px;
+    }    
+}
+
+@keyframes slide-up {
+    from {
+        height: 149px;
+    }
+    to {
+        height: 0;
+    }    
+}
+
+@keyframes slide-up-2 {
+    from {
+        height: 39.98px;
+    }
+    to {
+        height: 0;
+    }    
+}
+
+@keyframes slide-right {
+    from {
+       width: 100%;
+    }
+    to {
+        width: 0;
+    }    
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(5%);
+    }
+    65%{
+        transform: translateY(-3%);
+    }
+    80%{
+        transform: translateY(2%);
+    }		
+    100% {
+        transform: translateY(0%);
+    }		
+}
+
+// .drop-down {
+//     animation:
+//         slide-down .7s ease-out,
+//         shake .6s ease .4s;
+//     ;
+// }
